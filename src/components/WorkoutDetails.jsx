@@ -1,4 +1,5 @@
 import { type } from "@testing-library/user-event/dist/type";
+import DeleteIcon from '@mui/icons-material/Delete';
 import { useWorkoutContext } from "../hooks/useWorkoutContext";
 function WorkoutDetails({workout}) {
     const {dispatch} =useWorkoutContext();
@@ -19,7 +20,7 @@ function WorkoutDetails({workout}) {
         <p>   <strong> Load(kg) :</strong> {workout.load}  </p>
         <p>   <strong> Reps :</strong> {workout.reps}  </p>
         <p>{workout.createdAt} </p> 
-        <span onClick={handleClick}>delete</span>
+        <span onClick={handleClick}><DeleteIcon /></span>
         </div>
     )
 

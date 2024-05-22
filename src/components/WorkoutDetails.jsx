@@ -5,7 +5,7 @@ import { useWorkoutContext } from "../hooks/useWorkoutContext";
 function WorkoutDetails({workout}) {
     const {dispatch} =useWorkoutContext();
     async function handleClick() {
-        const response = await fetch('/api/workouts/' + workout._id, {
+        const response = await fetch('https://workouthubbackend-production.up.railway.app/api/workouts/' + workout._id, {
             method: 'DELETE'
         })
         const json = await response.json();

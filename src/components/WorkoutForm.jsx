@@ -18,7 +18,7 @@ function WorkoutForm() {
         
         const workout ={ title,load,reps};
 
-        const response = await fetch('https://workouthubbackend-production.up.railway.app/api/workouts',
+        const response = await fetch('https://workouthubbackend.onrender.com/api/workouts',
             {
                 method:'POST',
                 body: JSON.stringify(workout),
